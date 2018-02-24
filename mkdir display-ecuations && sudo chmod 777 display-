@@ -1,6 +1,28 @@
-mkdir display-ecuations && sudo chmod 777 display-ecuations
-sudo chmod 777 display-ecuations.html
+cd && cd htdocs/src/polymer-pub-app/body-paper && mkdir display-ecuations && sudo chmod 777 display-ecuations && sudo chmod 777 display-ecuations.html
+ 
+cd && cd htdocs/src/polymer-pub-app/body-paper && mkdir equation-displaymath && sudo chmod 777 equation-displaymath && sudo chmod 777 equation-displaymath.html
 
-mkdir equation-displaymath && sudo chmod 777 equation-displaymath
-sudo chmod 777 equation-displaymath.html
+cd && cd htdocs/src/polymer-pub-app/body-paper && mkdir equation-simple && sudo chmod 777 equation-simple && cd equation-simple && polymer init 
+sudo chmod 777 equation-simple.html 
 
+
+
+cd && cd htdocs/src/polymer-pub-app/body-paper && mkdir citations-set && sudo chmod 777 citations-set && cd citations-set && polymer init
+
+sudo chmod 777 citations-set.html
+
+cd && cd htdocs/src/polymer-pub-app/body-paper && mkdir table-set && sudo chmod 777 table-set && cd table-set && polymer init
+
+sudo chmod 777 table-set.html
+
+cd && cd htdocs/src/polymer-pub-app/body-paper && mkdir figure-set && sudo chmod 777 figure-set && cd figure-set && polymer init
+
+sudo chmod 777 figure-set.html
+
+cd && cd htdocs/src/polymer-pub-app/body-paper && mkdir theorem-like-constructs && sudo chmod 777 theorem-like-constructs && cd theorem-like-constructs && polymer init
+
+sudo chmod 777 theorem-like-constructs.html
+
+cd && cd htdocs/src/polymer-pub-app/body-paper && mkdir [] && sudo chmod 777 [] && cd [] && polymer init
+
+sudo chmod 777 []

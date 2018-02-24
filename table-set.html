@@ -1,16 +1,8 @@
 <link rel="import" href="../polymer/polymer-element.html">
-<link rel="import" href="inline-equations/inline-equations.html">
-<link rel="import" href="display-ecuations/display-ecuations.html">
-<link rel="import" href="equation-displaymath/equation-displaymath.html">
-<link rel="import" href="equation-simple/equation-simple.html">
-<link rel="import" href="citations-set/citations-set.html">
-<link rel="import" href="table-set/table-set.html">
-<link rel="import" href="figure-set/figure-set.html">
-<link rel="import" href="theorem-like-constructs/theorem-like-constructs.html">
 
-<dom-module id="body-paper">
+<dom-module id="table-set">
   <template>
-    <link rel="stylesheet" href="pub.css">
+<link rel="stylesheet" href="pub.css">
     <style>
 
       th {
@@ -319,133 +311,69 @@
         display: block;
       }
     </style>
+          <h2>Tables</h2>
 
-    <!-- Body of the Paper-->
-  
-      <h1>The <em>Body</em> of the Paper</h1>
-      <p>Typically, the body of a paper is organized into a hierarchical structure, with numbered or unnumbered headings for sections, subsections, sub-subsections, and even smaller sections. The command \section that precedes this paragraph is part of such a hierarchy.<footnote>This is the second footnote. It starts a series of three footnotes that add nothing informational, but just give an idea of how footnotes work and look. It is a wordy one, just so you see how a longish one plays out.</footnote> <span class="latex">L<span>a</span>T<span>e</span>X</span> handles the numbering and placement of these headings for you, when you use the appropriate heading commands around the titles of the headings. If you want a sub-subsection or smaller part to be unnumbered in your output, simply append an asterisk to the command name. Examples of both numbered and unnumbered headings will appear throughout the balance of this sample document.</p>
-      <p>Because the entire article is contained in the <strong>document</strong> environment, you can indicate the start of a new paragraph with a blank line in your input file; that is why this sentence forms a separate paragraph.</p>
+      <p>Because tables cannot be split across pages, the best placement for them is typically the top of the page nearest their initial cite. To ensure this proper <q>floating</q> placement of tables, use the environment <strong>table</strong> to enclose the table’s contents and the table caption. The contents of the table itself must go in the <strong>tabular</strong> environment, to be aligned properly in rows and columns, with the desired horizontal and vertical rules. Again, detailed instructions on <strong>tabular</strong> material is found in the <em><span class="latex">L<span>a</span>T<span>e</span>X</span> User’s Guide</em>.</p>
 
-      <h2>Type Changes and <em>Special</em> Characters</h2>
-      <p>We have already seen several typeface changes in this sample. You can indicate italicized words or phrases in your text with the command <code>\textit</code>; emboldening with the command <code>\textbf</code> and typewriter-style (for instance, for computer code) with <code>\texttt</code>. But remember, you do not have to indicate typestyle changes when such changes are part of the <em>structural</em> elements of your article; for instance, the heading of this subsection will be in a sans serif<footnote>A third footnote, here. Let’s make this a rather short one to see how it looks.</footnote> typeface, but that is handled by the document class file. Take care with the use of<footnote>A fourth, and last, footnote.</footnote> the curly braces in typeface changes; they mark the beginning and end of the text that is to be in the different typeface.</p>
-      <p>You can use whatever symbols, accented characters, or non-English characters you need anywhere in your document; you can find a complete list of what is available in the <em><span class="latex">L<span>a</span>T<span>e</span>X</span> User’s Guide</em><cite href="#lamport86">5</cite>.</p>
+      <p>Immediately following this sentence is the point at which <cite href="#tablefreq" class="table">1</cite> is included in the input file; compare the placement of the table here with the table in the printed dvi output of this document.</p>
 
+      <table id="tablefreq">
+        <caption>Frequency of Special Characters</caption>
+        <thead>
+          <tr>
+            <th>Non-English or Math</th>
+            <th>Frequency</th>
+            <th>Comments</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ø</td>
+            <td>1 in 1,000</td>
+            <td>For Swedish names</td>
+          </tr>
+          <tr>
+            <td>π</td>
+            <td>1 in 5</td>
+            <td>Common in math</td>
+          </tr>
+          <tr>
+            <td>$</td>
+            <td>4 in 5</td>
+            <td>Used in business</td>
+          </tr>
+          <tr>
+            <td><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span id="MathJax-Element-6-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msubsup&gt;&lt;mi&gt;&amp;#x3A8;&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msubsup&gt;&lt;/math&gt;" role="presentation" style="font-size: 101%; position: relative;"><span id="MJXc-Node-70" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-71" class="mjx-mrow"><span id="MJXc-Node-72" class="mjx-msubsup"><span class="mjx-base" style="margin-right: -0.08em;"><span id="MJXc-Node-73" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.436em; padding-bottom: 0.251em; padding-right: 0.08em;">Ψ</span></span></span><span class="mjx-stack" style="vertical-align: -0.315em;"><span class="mjx-sup" style="font-size: 70.7%; padding-bottom: 0.255em; padding-left: 0.218em; padding-right: 0.071em;"><span id="MJXc-Node-75" class="mjx-mn" style=""><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.374em; padding-bottom: 0.313em;">2</span></span></span><span class="mjx-sub" style="font-size: 70.7%; padding-right: 0.071em;"><span id="MJXc-Node-74" class="mjx-mn" style=""><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.374em; padding-bottom: 0.313em;">1</span></span></span></span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msubsup><mi>Ψ</mi><mn>1</mn><mn>2</mn></msubsup></math></span></span><script type="math/mml" id="MathJax-Element-6"><math><msubsup><mi>Ψ</mi><mn>1</mn><mn>2</mn></msubsup></math></script></td>
+            <td>1 in 40,000</td>
+            <td>Unexplained usage</td>
+          </tr>
+        </tbody>
+      </table>
 
-     <!-- Math Equations -->
-      <h2>Math Equations</h2>
-      <p>You may want to display math equations in three distinct styles: inline, numbered or non-numbered display. Each of the three are discussed in the next sections.</p>
-
-      <h3>Inline (In-text) Equations</h3>
-      <p>A formula that appears in the running text is called an inline or in-text formula. It is produced by the <strong>math</strong> environment, which can be invoked with the usual <code>\begin. . .\end</code> construction or with the short form <code>$. . .$</code>. You can use any of the symbols and structures, from α to ω, available in <span class="latex">L<span>a</span>T<span>e</span>X</span><cite href="#lamport86">5</cite>; this section will simply show a few examples of in-text equations in context. Notice how this equation: 
-
-      <inline-equations></inline-equations>
-
-      , set here in in-line math style, looks slightly different when set in display style. (See next section).</p>
-
-      <h3>Display Equations</h3>
-      <p>A numbered display equation – one set off by vertical space from the text and centered horizontally – is produced by the <strong>equation</strong> environment. An unnumbered display equation is produced by the <strong>displaymath</strong> environment.</p>
-      <p>Again, in either environment, you can use any of the symbols and structures available in <span class="latex">L<span>a</span>T<span>e</span>X</span>; this section will just give a couple of examples of display equations in context. First, consider the equation, shown as an inline equation above:</p>
-
-     <display-ecuations></display-ecuations>
-
-      <p>Notice how it is formatted somewhat differently in the <strong>displaymath</strong> environment. Now, we’ll enter an unnumbered equation:</p>
-
-      <equation-displaymath></equation-displaymath>
-
-      <p>and follow it with another numbered equation:</p>
-      
-      <equation-simple></equation-simple>
-
-      <p>just to demonstrate <span class="latex">L<span>a</span>T<span>e</span>X</span>’s able handling of numbering.</p>
-
-
-      <citations-set></citations-set>
-
-      <table-set></table-set>
-
-      <figure-set></figure-set>
-
-      <theorem-like-constructs></theorem-like-constructs>
-
-      <h2 class="counter-skip">A <em>Caveat</em> for the <span class="tex">T<span>e</span>X</span> Expert</h2>
-      <p>Because you have just been given permission to use the <code>\newdef</code> command to create a new form, you might think you can use <span class="tex">T<span>e</span>X</span>’s <code>\def</code> to create a new command: <em>Please refrain from doing this!</em> Remember that your <span class="latex">L<span>a</span>T<span>e</span>X</span> source code is primarily intended to create camera-ready copy, but may be converted to other forms – e.g. HTML. If you inadvertently omit some or all of the <code>\def</code>s recompilation will be, to say the least, problematic.</p>
-    
-
-    <section>
-      <h1>Conclusions</h1>
-      <p>This paragraph will end the body of this sample document. Remember that you might still have Acknowledgments or Appendices; brief samples of these follow. There is still the Bibliography to deal with; and we will make a disclaimer about that here: with the exception of the reference to the <span class="latex">L<span>a</span>T<span>e</span>X</span> book, the citations in this paper are to articles which have nothing to do with the present subject and are used as examples only.</p>
-    </section>
-
-    <section>
-      <h1>Acknowledgements</h1>
-      <p>This section is optional; it is a location for you to acknowledge grants, funding, editing assistance and what have you. In the present case, for example, the authors would like to thank Gerald Murray of ACM for his help in codifying this <em>Author’s Guide</em> and the <strong>.cls</strong> and <strong>.tex</strong> files that it describes.</p>
-    </section>
-
-    <section>
-      <h1>Additional Authors</h1>
-      <p>Additional authors: John Smith (The Thørväld Group, email: <code><a href="mailto:jsmith@affiliation.org">jsmith@affiliation.org</a></code>) and Julius P. Kumquat (The Kumquat Consortium, email: <code><a href="mailto:jpkumquat@consortium.net">jpkumquat@consortium.net</a></code>).</p>
-    </section>
-
-    <section>
-      <h1>References</h1>
-
-      <ref id="bowman93">Bowman, M., Debray, S. K., and Peterson, L. L. 1993. Reasoning about naming systems. <em>ACM Trans. Program. Lang. Syst.</em> 15, 5 (Nov. 1993), 795-825.</ref>
-
-      <ref id="braams91">J. Braams. Babel, a multilingual style-option system for use with <span class="latex">L<span>a</span>T<span>e</span>X</span>’s standard document styles. <em>TUGboat</em>, 12(2):291–301, June 1991.</ref>
-
-      <ref id="clark91">M. Clark. Post congress tristesse. In <em>TeX90 Conference Proceedings</em>, pages 84–89. TeX Users Group, March 1991.</ref>
-
-      <ref id="herlihy93">M. Herlihy. A methodology for implementing highly concurrent data objects. <em>ACM Trans. Program. Lang. Syst.</em>, 15(5):745–770, November 1993.</ref>
-
-      <ref id="lamport86">L. Lamport. <em>LaTeX User’s Guide and Document Reference Manual</em>. Addison-Wesley Publishing Company, Reading, Massachusetts, 1986.</ref>
-
-      <ref id="salas78">S. Salas and E. Hille. <em>Calculus: One and Several Variable</em>. John Wiley and Sons, New York, 1978.</ref>
-
-      <ref id="park13">Park, T. H., Saxena, A., Jagannath, S., Wiedenbeck, S., and Forte, A. 2013. Towards a taxonomy of errors in HTML and CSS. In <em>Proceedings of the ACM International Computing Education Research Conference</em> (San Diego, USA, August 12 - 14, 2013). ICER '13. ACM, New York, NY, 75-82.</ref>
-      
-    </section>
-
-    <section class="appendix">
-      <h1 class="counter-reset">Headings in Appendices</h1>
-      <p>The rules about hierarchical headings discussed above for the body of the article are different in the appendices. In the appendix environment, the command section is used to indicate the start of each Appendix, with alphabetic order designation (i.e. the first is A, the second B, etc.) and a title (if you include one). So, if you need hierarchical structure within an Appendix, start with subsection as the highest level. Here is an outline of the body of this document in Appendix-appropriate form:</p>
-
-      <h2>Introduction</h2>
-
-      <h2>The Body of the Paper</h2>
-      <h3>Type Changes and Special Characters</h3>
-      <h3>Math Equations</h3>
-
-      <h2>Acknowledgments</h2>
-
-      <h2>References</h2>
-      <p>Generated by bibtex from your .bib file. Run latex, then bibtex, then latex twice (to resolve references) to create the .bbl file. Insert that .bbl file into the .tex source file and comment out the command <code>\thebibliography</code>.</p>
-
-      <h1>More Help for the Hardy</h1>
-    </section>
-  <script data-cfasync="false" src="email-decode.min.js.descarga"></script>
+      <p>To set a wider table, which takes up the whole width of the page’s live area, use the environment <strong>table*</strong> to enclose the table’s contents and the table caption. As with a single-column table, this wide table will <q>float</q> to a location deemed more desirable. Immediately following this sentence is the point at which <cite href="#table-comments" class="table">2</cite> is included in the input file; again, it is instructive to compare the placement of the table here with the table in the printed dvi output of this document.</p>
   </template>
 
   <script>
     /**
-     * `body-paper`
+     * `table-set`
      * 
      *
      * @customElement
      * @polymer
      * @demo demo/index.html
      */
-    class BodyPaper extends Polymer.Element {
-      static get is() { return 'body-paper'; }
+    class TableSet extends Polymer.Element {
+      static get is() { return 'table-set'; }
       static get properties() {
         return {
           prop1: {
             type: String,
-            value: 'body-paper'
+            value: 'table-set'
           }
         };
       }
     }
 
-    window.customElements.define(BodyPaper.is, BodyPaper);
+    window.customElements.define(TableSet.is, TableSet);
   </script>
 </dom-module>
