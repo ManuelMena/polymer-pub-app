@@ -1,0 +1,47 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="header-counter-skip"">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <!-- header class="counter-skip" -->
+    <header class="counter-skip">
+      <h1 class="title">A Sample <em>ACM</em> SIG Proceedings Paper in LaTeX Format for Polymer</h1>
+      <h2>[Extended Abstract]</h2>
+        <div class="author">
+          <div>Manuel Mena</div>
+          <div>tetraktys.info</div>
+          <div>Calle 12 # 15-40 701B</div>
+          <div>Pereira</div>
+          <div><a href="manuelmena@tetraktys.info">manuelmena@tetraktys.info</a></div>
+        </div>
+      </div>
+    </header>
+  </template>
+
+    <script>
+    /**
+     * `header-counter-skip`
+     *
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class HeaderCounterSkip extends Polymer.Element {
+      static get is() { return 'header-counter-skip'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'header-counter-skip'
+          }
+        };
+      }
+    }
+    window.customElements.define(HeaderCounterSkip.is, HeaderCounterSkip);
+  </script>
+</dom-module>
