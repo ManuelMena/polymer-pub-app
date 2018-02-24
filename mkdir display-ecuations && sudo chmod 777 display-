@@ -1,0 +1,6 @@
+mkdir display-ecuations && sudo chmod 777 display-ecuations
+sudo chmod 777 display-ecuations.html
+
+mkdir equation-displaymath && sudo chmod 777 equation-displaymath
+sudo chmod 777 equation-displaymath.html
+
