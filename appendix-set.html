@@ -1,22 +1,8 @@
 <link rel="import" href="../polymer/polymer-element.html">
-<link rel="import" href="inline-equations/inline-equations.html">
-<link rel="import" href="display-ecuations/display-ecuations.html">
-<link rel="import" href="equation-displaymath/equation-displaymath.html">
-<link rel="import" href="equation-simple/equation-simple.html">
-<link rel="import" href="theorem-like-constructs/theorem-like-constructs.html">
-<link rel="import" href="citations-set/citations-set.html">
-<link rel="import" href="table-set/table-set.html">
-<link rel="import" href="figure-set/figure-set.html">
-<link rel="import" href="caveat-expert/caveat-expert.html">
-<link rel="import" href="conclusion-set/conclusion-set.html">
-<link rel="import" href="acknowledgements-section/acknowledgements-section.html">
-<link rel="import" href="additional-authors/additional-authors.html">
-<link rel="import" href="references-set/references-set.html">
-<link rel="import" href="appendix-set/appendix-set.html">
 
-<dom-module id="body-paper">
+<dom-module id="appendix-set">
   <template>
-    <link rel="stylesheet" href="pub.css">
+<link rel="stylesheet" href="pub.css">
     <style>
 
       th {
@@ -325,63 +311,46 @@
         display: block;
       }
     </style>
+    <section class="appendix">
+      <h1 class="counter-reset">Headings in Appendices</h1>
+      <p>The rules about hierarchical headings discussed above for the body of the article are different in the appendices. In the appendix environment, the command section is used to indicate the start of each Appendix, with alphabetic order designation (i.e. the first is A, the second B, etc.) and a title (if you include one). So, if you need hierarchical structure within an Appendix, start with subsection as the highest level. Here is an outline of the body of this document in Appendix-appropriate form:</p>
 
-<!-- Body of the Paper-->
-    <h1>The <em>Body</em> of the Paper</h1>
-    <p>Typically, the body of a paper is organized into a hierarchical structure, with numbered or unnumbered headings for sections, subsections, sub-subsections, and even smaller sections. The command \section that precedes this paragraph is part of such a hierarchy.<footnote>This is the second footnote. It starts a series of three footnotes that add nothing informational, but just give an idea of how footnotes work and look. It is a wordy one, just so you see how a longish one plays out.</footnote> <span class="latex">L<span>a</span>T<span>e</span>X</span> handles the numbering and placement of these headings for you, when you use the appropriate heading commands around the titles of the headings. If you want a sub-subsection or smaller part to be unnumbered in your output, simply append an asterisk to the command name. Examples of both numbered and unnumbered headings will appear throughout the balance of this sample document.</p>
-    <p>Because the entire article is contained in the <strong>document</strong> environment, you can indicate the start of a new paragraph with a blank line in your input file; that is why this sentence forms a separate paragraph.</p>
-    <h2>Type Changes and <em>Special</em> Characters</h2>
-    <p>We have already seen several typeface changes in this sample. You can indicate italicized words or phrases in your text with the command <code>\textit</code>; emboldening with the command <code>\textbf</code> and typewriter-style (for instance, for computer code) with <code>\texttt</code>. But remember, you do not have to indicate typestyle changes when such changes are part of the <em>structural</em> elements of your article; for instance, the heading of this subsection will be in a sans serif<footnote>A third footnote, here. Let’s make this a rather short one to see how it looks.</footnote> typeface, but that is handled by the document class file. Take care with the use of<footnote>A fourth, and last, footnote.</footnote> the curly braces in typeface changes; they mark the beginning and end of the text that is to be in the different typeface.</p>
-    <p>You can use whatever symbols, accented characters, or non-English characters you need anywhere in your document; you can find a complete list of what is available in the <em><span class="latex">L<span>a</span>T<span>e</span>X</span> User’s Guide</em><cite href="#lamport86">5</cite>.</p>
-<!-- Math Equations -->
-    <h2>Math Equations</h2>
-    <p>You may want to display math equations in three distinct styles: inline, numbered or non-numbered display. Each of the three are discussed in the next sections.</p>
-    <h3>Inline (In-text) Equations</h3>
-    <p>A formula that appears in the running text is called an inline or in-text formula. It is produced by the <strong>math</strong> environment, which can be invoked with the usual <code>\begin. . .\end</code> construction or with the short form <code>$. . .$</code>. You can use any of the symbols and structures, from α to ω, available in <span class="latex">L<span>a</span>T<span>e</span>X</span><cite href="#lamport86">5</cite>; this section will simply show a few examples of in-text equations in context. Notice how this equation: 
-    <inline-equations></inline-equations>
-    , set here in in-line math style, looks slightly different when set in display style. (See next section).</p>
-    <h3>Display Equations</h3>
-    <p>A numbered display equation – one set off by vertical space from the text and centered horizontally – is produced by the <strong>equation</strong> environment. An unnumbered display equation is produced by the <strong>displaymath</strong> environment.</p>
-    <p>Again, in either environment, you can use any of the symbols and structures available in <span class="latex">L<span>a</span>T<span>e</span>X</span>; this section will just give a couple of examples of display equations in context. First, consider the equation, shown as an inline equation above:</p>
-    <display-ecuations></display-ecuations>
-    <p>Notice how it is formatted somewhat differently in the <strong>displaymath</strong> environment. Now, we’ll enter an unnumbered equation:</p>
-    <equation-displaymath></equation-displaymath>
-    <p>and follow it with another numbered equation:</p>
-    <equation-simple></equation-simple>
-    <p>just to demonstrate <span class="latex">L<span>a</span>T<span>e</span>X</span>’s able handling of numbering.</p>
-    <citations-set></citations-set>
-    <table-set></table-set>
-    <figure-set></figure-set>
-    <theorem-like-constructs></theorem-like-constructs>
-    <caveat-expert></caveat-expert>
-    <conclusion-set></conclusion-set>
-    <acknowledgements-section></acknowledgements-section>
-    <additional-authors></additional-authors>
-    <references-set></references-set>
-    <appendix-set></appendix-set>
+      <h2>Introduction</h2>
+
+      <h2>The Body of the Paper</h2>
+      <h3>Type Changes and Special Characters</h3>
+      <h3>Math Equations</h3>
+
+      <h2>Acknowledgments</h2>
+
+      <h2>References</h2>
+      <p>Generated by bibtex from your .bib file. Run latex, then bibtex, then latex twice (to resolve references) to create the .bbl file. Insert that .bbl file into the .tex source file and comment out the command <code>\thebibliography</code>.</p>
+
+      <h1>More Help for the Hardy</h1>
+    </section>
   </template>
-
+  <script data-cfasync="false" src="email-decode.min.js.descarga"></script>
   <script>
     /**
-     * `body-paper`
+     * `appendix-set`
      * 
      *
      * @customElement
      * @polymer
      * @demo demo/index.html
      */
-    class BodyPaper extends Polymer.Element {
-      static get is() { return 'body-paper'; }
+    class AppendixSet extends Polymer.Element {
+      static get is() { return 'appendix-set'; }
       static get properties() {
         return {
           prop1: {
             type: String,
-            value: 'body-paper'
+            value: 'appendix-set'
           }
         };
       }
     }
 
-    window.customElements.define(BodyPaper.is, BodyPaper);
+    window.customElements.define(AppendixSet.is, AppendixSet);
   </script>
 </dom-module>
